@@ -1,0 +1,168 @@
+/* Global dark mode theme */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f5f5;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #f5f5f5;
+}
+
+/* Button styles from Uiverse.io (customized for dark mode) */
+.button {
+  cursor: pointer;
+  margin: 10px;
+  padding: 12px 28px;
+  font-size: 18px;
+  color: #f5f5f5;
+  background-color: transparent;
+  border: 2px solid #00c9a7;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #00c9a7;
+  transition: all 0.6s ease-in-out;
+}
+
+.button:hover::before {
+  scale: 3;
+}
+
+.button:hover {
+  color: #121212;
+  scale: 1.05;
+  box-shadow: 0 0px 15px rgba(0, 201, 167, 0.4);
+}
+
+/* Video container */
+.video-container {
+  margin-top: 40px;
+}
+
+.video-box {
+  width: 640px;
+  height: 480px;
+  border: 3px solid #00c9a7;
+  border-radius: 12px;
+  object-fit: cover;
+  background-color: #222;
+}
+
+/* Loader animation from Uiverse.io */
+@keyframes square-animation {
+  0% { left: 0; top: 0; }
+  10.5% { left: 0; top: 0; }
+  12.5% { left: 32px; top: 0; }
+  23% { left: 32px; top: 0; }
+  25% { left: 64px; top: 0; }
+  35.5% { left: 64px; top: 0; }
+  37.5% { left: 64px; top: 32px; }
+  48% { left: 64px; top: 32px; }
+  50% { left: 32px; top: 32px; }
+  60.5% { left: 32px; top: 32px; }
+  62.5% { left: 32px; top: 64px; }
+  73% { left: 32px; top: 64px; }
+  75% { left: 0; top: 64px; }
+  85.5% { left: 0; top: 64px; }
+  87.5% { left: 0; top: 32px; }
+  98% { left: 0; top: 32px; }
+  100% { left: 0; top: 0; }
+}
+
+.loader {
+  margin-top: 40px;
+  position: relative;
+  width: 96px;
+  height: 96px;
+  transform: rotate(45deg);
+}
+
+.loader-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  background: #00c9a7;
+  animation: square-animation 10s ease-in-out infinite both;
+}
+
+.loader-square:nth-of-type(1) { animation-delay: -1.428s; }
+.loader-square:nth-of-type(2) { animation-delay: -2.857s; }
+.loader-square:nth-of-type(3) { animation-delay: -4.285s; }
+.loader-square:nth-of-type(4) { animation-delay: -5.714s; }
+.loader-square:nth-of-type(5) { animation-delay: -7.143s; }
+.loader-square:nth-of-type(6) { animation-delay: -8.571s; }
+.loader-square:nth-of-type(7) { animation-delay: -10s; }
+
+.stop-button {
+  cursor: pointer;
+  margin: 10px;
+  padding: 12px 28px;
+  font-size: 18px;
+  color: #f5f5f5;
+  background-color: transparent;
+  border: 2px solid #ff4c4c;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.stop-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #ff4c4c;
+  transition: all 0.6s ease-in-out;
+}
+
+.stop-button:hover::before {
+  scale: 3;
+}
+
+.stop-button:hover {
+  color: #121212;
+  scale: 1.05;
+  box-shadow: 0 0px 15px rgba(255, 76, 76, 0.4);
+}
+
+
+
+
+
+
